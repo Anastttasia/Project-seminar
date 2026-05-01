@@ -1,0 +1,27 @@
+<svg width="1920" height="840" viewBox="0 0 1920 840" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_481_28)">
+<mask id="mask0_481_28" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-3" y="-78" width="1923" height="918">
+<path d="M1920 799.092C1920 799.092 1292.81 891.136 938.742 799.092C584.675 707.047 -3 799.092 -3 799.092V-78H1920V799.092Z" fill="#12A9F0"/>
+</mask>
+<g mask="url(#mask0_481_28)">
+<rect y="-31" width="1949" height="873" fill="#1E1E1E"/>
+<g opacity="0.7" filter="url(#filter0_f_481_28)">
+<ellipse cx="639" cy="691" rx="463" ry="326" transform="rotate(180 639 691)" fill="url(#paint0_radial_481_28)"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_481_28" x="-124" y="65" width="1526" height="1252" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_481_28"/>
+</filter>
+<radialGradient id="paint0_radial_481_28" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(639 691) rotate(90) scale(326 463)">
+<stop stop-color="#0094FF"/>
+<stop offset="1" stop-color="#12A9F0"/>
+</radialGradient>
+<clipPath id="clip0_481_28">
+<rect width="1920" height="840" fill="white"/>
+</clipPath>
+</defs>
+</svg>

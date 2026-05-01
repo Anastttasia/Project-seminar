@@ -1,0 +1,110 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flexConRowStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*Стили для отображения на мобильном устройстве */
+.cardReview {
+    width: 290px;
+    height: 472px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.cardInfoReview {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.descriptionReviewBlock {
+    height: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.descriptionReview {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.nameCardReview {
+    font-family: 'MontserratBold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+.discriptionCardReview {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0.5rem 0 0 0;
+    color: rgba(0, 0, 0, 0.486);
+}
+
+.ratingBlock {
+    height: 24px;
+    width: 58px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 0.774);
+    margin-left: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratingBlock img {
+    height: 24px;
+    width: 24px;
+    margin: 0 0.5rem 0 0;
+}
+
+.ratingBlock p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    margin: 0 0.5rem 0 0;
+}
+
+.formIcon {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.7rem;
+}
+
+/*Стили для отображения на компьютере*/
+@media (min-width: 1024px) {
+    .cardReview {
+        width: 480px;
+        height: 379px;
+    }
+
+    .descriptionReviewBlock {
+        height: 300px;
+    }
+}

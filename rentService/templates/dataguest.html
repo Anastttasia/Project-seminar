@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/textSettings.css">
+    <link rel="stylesheet" href="./src/style/main.css">
+    <link rel="stylesheet" href="./src/style/cardService.css">
+    <link rel="stylesheet" href="./src/style/card.css">
+    <title>BSP</title>
+</head>
+
+<body>
+    <div class="modalMenu" id="modalWindow">
+        <div style="width: 100%; display: flex; justify-content:flex-end">
+            <button class="btmMenuClose" id="closeModalBtn"></button>
+        </div>
+
+        <div class="modalContent">
+
+            <section class="flexColStart">
+                <a class="linkModalMenu" href="apartments.html">Апартаменты</a>
+                <a class="linkModalMenu" href="index.html">О нас</a>
+                <a class="linkModalMenu" href="rules.html">Правила проживания</a>
+                <a class="linkModalMenu" href="">Контакты</a>
+            </section>
+
+            <section class="flexConRowStart">
+
+                <div class="languageBlock">
+                    <img class="languageImg" src="./src/img/flags/ru.svg">
+                    <p class="languageText">Ru</p>
+                </div>
+
+                <div class="languageBlock notActive">
+                    <img class="languageImg" src="./src/img/flags/us.svg">
+                    <p class="languageText">Eng</p>
+                </div>
+
+                <div class="languageBlock notActive">
+                    <img class="languageImg" src="./src/img/flags/ka.svg">
+                    <p class="languageText">Geo</p>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <header class="headerSmall">
+        <div class="headerContainer">
+            <a href="index.html"><img class="logoImg" src="./src/img/logo.svg"></a>
+            <button class="btmMenu" id="openModalBtn"></button>
+        </div>
+    </header>
+
+    <main style="margin-bottom: 6rem;">
+        <div class="content">
+            <div class="infoBlockApart">
+                <a href="apartments.html" class="btnBack flexConRowStart">← К деталям и услугам</a>
+                <h2 style="justify-content: flex-start; margin-top: 0;">Данные гостя</h2>
+            </div>
+            <div class="containerDetails">
+
+                <form action="process_booking.php" method="post" class="formGuest">
+                    <input class="inputDataGuest" type="text" id="" name="name" required placeholder="Имя">
+
+                    <input class="inputDataGuest" type="text" id="" name="" required placeholder="Фамилия">
+
+                    <input class="inputDataGuest" type="email" id="" name="" required placeholder="Почта">
+
+                    <input class="inputDataGuest" type="tel" id="phone" name="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="+995 000 000-000" />
+
+                    <select name="" id="" class="inputDataGuest">
+                        <option value="value1" class="inputDataGuest">Страна проживания</option>
+                        <option value="value2" class="inputDataGuest">Сортировка: Сначала дешевле</option>
+                    </select>
+
+                    <!--<input class="inputDataGuest" type="text" id="" name="name" required placeholder="Пожелания" >-->
+
+                    <textarea class="inputDataGuest" placeholder="Пожелания" style="height: 142px;"></textarea>
+
+                    <div class="flexConRowStart" style="align-items: flex-start; margin-top: 1.5rem;">
+                        <input type="checkbox" id="checkin" name="checkin" required placeholder="Пожелания"
+                            style="width: 23px; height: 23px; margin-right: 0.5rem;">
+                        <label class="lableInputDataGuest">Вы соглашаетесь с политикой конфиденциальности сайта и
+                            условиями бронирования</label>
+                    </div>
+
+                    <button class="btnBook" style="margin-top: 1.5rem;"><p class="btnBookDesc">Перейти к оплате</p></button>
+
+                </form>
+
+                <div style="width: 100%; display: flex; justify-content: center;">
+
+                    <div class="cardDetSer" style="height: 794px;">
+                        <img class="imgCardDetSer" src="./src/img/photo/apart1.jpg">
+
+                        <div class="cardInfo">
+                            <p class="nameCardDetSer">Двухуровневый люкс с 2 спальнями</p>
+
+                            <section class="cardDetSerEdit">
+                                <p class="nameCardDetSer">01.12.2025 — 10.12.2025</p>
+                                <button class="btnIconCardDetSer"><img class="imgIconCardDetSer"
+                                        src="./src/img/editIcon.svg"></button>
+                            </section>
+
+                            <section class="cardDetSerEdit">
+                                <p class="nameCardDetSer">2 взрослых</p>
+                                <button class="btnIconCardDetSer"><img class="imgIconCardDetSer"
+                                        src="./src/img/editIcon.svg"></button>
+                            </section>
+
+                            <section class="cardDetSerEdit"
+                                style="width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.24);  border-bottom: 1px solid rgba(0, 0, 0, 0.24); padding: 1rem 0; box-sizing: border-box; margin: 0;">
+                                <p class="nameCardDetSer" style="margin-bottom: 0.25rem;">Стандартный тариф</p>
+                                <button class="btnIconCardDetSer"><img class="imgIconCardDetSer"
+                                        src="./src/img/editIcon.svg"></button>
+                            </section>
+
+                            <section class="cardDetSerEdit">
+                                <div>
+                                    <p class="nameCardDetSer">Услуги:</p>
+                                    <p class="nameCardDetSer" style="font-weight: 400;">Ранний заезд, уборка</p>
+                                </div>
+
+                                <button class="btnIconCardDetSer"><img class="imgIconCardDetSer"
+                                        src="./src/img/editIcon.svg"></button>
+                            </section>
+
+                            <section class="" style="width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.24);">
+                                <p class="priceSumDet" style="margin-bottom: 0.25rem;">990$</p>
+                                <section class="priceDecDetSerDet">
+                                    <p>за 9 ночей</p>
+                                    <p>включая налоги и сборы</p>
+                                </section>
+                            </section>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./src/scripts/modal_window.js"></script>
+</body>
+
+</html>

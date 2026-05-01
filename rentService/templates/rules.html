@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/textSettings.css">
+    <link rel="stylesheet" href="./src/style/main.css">
+    <link rel="stylesheet" href="./src/style/cardService.css">
+    <title>BSP</title>
+</head>
+
+<body>
+    <div class="modalMenu" id="modalWindow">
+        <div style="width: 100%; display: flex; justify-content:flex-end">
+            <button class="btmMenuClose" id="closeModalBtn"></button>
+        </div>
+
+        <div class="modalContent">
+
+            <section class="flexColStart">
+                <a class="linkModalMenu" href="apartments.html">Апартаменты</a>
+                <a class="linkModalMenu" href="index.html">О нас</a>
+                <a class="linkModalMenu" href="rules.html">Правила проживания</a>
+                <a class="linkModalMenu" href="">Контакты</a>
+            </section>
+
+            <section class="flexConRowStart">
+
+                <div class="languageBlock">
+                    <img class="languageImg" src="./src/img/flags/ru.svg">
+                    <p class="languageText">Ru</p>
+                </div>
+
+                <div class="languageBlock notActive">
+                    <img class="languageImg" src="./src/img/flags/us.svg">
+                    <p class="languageText">Eng</p>
+                </div>
+
+                <div class="languageBlock notActive">
+                    <img class="languageImg" src="./src/img/flags/ka.svg">
+                    <p class="languageText">Geo</p>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <header class="headerSmall">
+        <div class="headerContainer">
+            <a href="index.html"><img class="logoImg" src="./src/img/logo.svg"></a>
+            <button class="btmMenu" id="openModalBtn"></button>
+        </div>
+    </header>
+
+    <main style="margin-bottom: 7rem;">
+        <div class="content">
+            <h2 style="justify-content: flex-start; font-family: 'MontserratExtraBold';">Правила проживания</h2>
+            <p class="cardService" style="width: 100%; font-size: 24px; font-family: 'Montserrat';">
+                Мы ценим и уважаем наших гостей. Для поддержания стабильно высокого уровня сервиса и комфорта у нас есть
+                небольшой набор стандартных правил. Бронируя наши апартаменты, вы соглашаетесь с этими правилами
+            </p>
+
+            <section class="flexConCol containerBlock">
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/check_in.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Заезд с 15:00</p>
+                        <p class="descriptionService">Сообщите нам о планируемом времени своего приезда.По запросу
+                            доступна опция «оставить багаж» и «ранний заезд».</p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/check_out.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Выезд до 12:00</p>
+                        <p class="descriptionService">Сообщите нам о планируемом времени выезда. По запросу доступна
+                            опция «оставить багаж» и «поздний выезд».</p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/self_check_in.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Самостоятельное заселение</p>
+                        <p class="descriptionService">Мы заранее пришлем вам памятку гостя и подробную информацию о
+                            расположении квартиры. В день приезда сообщим уникальные коды для электронных замков.</p>
+                        <p class="descriptionService" style="margin-top: 0.5rem;">Если вам необходима помощь при
+                            заселении, укажите это в комментариях при бронировании.</p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/documents.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Документы для заселения</p>
+                        <p class="descriptionService">При заселении необходимо предоставить паспорт и подписать договор.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/no_smoking.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Курение запрещено</p>
+                        <p class="descriptionService">Black Sea Point Apartments — это территория, свободная от дыма. Мы
+                            просим гостей отнестись с пониманием к правилу о запрете курения сигарет, электронных
+                            устройств и кальянов. Во всех наших студиях запрещено курить, включая электронные сигареты.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/number_guests.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Количество гостей</p>
+                        <p class="descriptionService">В квартире должно ночевать указанное в бронировании количество
+                            гостей.</p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/silence.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Тишина после 23:00</p>
+                        <p class="descriptionService">Наши апартаменты не предназначены для вечеринок и мероприятий.
+                            Просим также учитывать местные законы, регулирующие максимально допустимые уровни шума в
+                            жилых и общественных зданиях.</p>
+                        <p class="descriptionService" style="margin-top: 0.5rem;"><a
+                                href="https://matsne.gov.ge/ka/document/view/3779710?publication=0"
+                                style="color: black;" class="descriptionService">Постановление Правительства Грузии №
+                                398</a> от 15 августа 2017 года “Технический регламент о нормах акустического шума в
+                            помещениях и на территориях жилых зданий и общественных учреждений”</p>
+                    </div>
+                </div>
+
+                <div class="cardService" style="width: 100%; margin: 2rem 0;">
+                    <div class="imgService" style="background-image: url('./src/img/rules/before_check_out.svg');"></div>
+                    <div class="infoCardService">
+                        <p class="nameService" style="font-size: 24px;">Перед выездом</p>
+                        <p class="descriptionService" style="margin-top: 0.5rem;">Оставьте использованные полотенца в
+                            корзине для белья, выключите электроприборы, заприте дверь и верните ключи в сейф</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footerBackground">
+        <div class="footerLanguageBlock">
+            <img class="languageImg" src="./src/img/flags/ru.svg">
+            <p>Ru</p>
+        </div>
+
+        <div class="footerLinkBlock">
+            <a class="footerLink" href="index.html">О нас</a>
+            <a class="footerLink" href="apartments.html">Апартаменты</a>
+            <a class="footerLink" href="rules.html">Правила проживания</a>
+            <a class="footerLink" href="">Документы</a>
+            <a class="footerLink" href="">Договор оферты</a>
+        </div>
+
+        <div class="footerLogoBlock">
+            <img src="./src/img/logo.svg" class="logoImg">
+            <p class="footerP">© БСП Групп, 2025</p>
+        </div>
+    </footer>
+
+    <script src="./src/scripts/modal_window.js"></script>
+</body>
+
+</html>

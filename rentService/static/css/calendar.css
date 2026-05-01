@@ -1,0 +1,184 @@
+body {
+    font-family: 'Montserrat', normal;
+}
+
+.datePickerFull {
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: absolute;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    flex-direction: row;
+    transform: translateY(80%);
+}
+
+.datePickerShort {
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: absolute;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    transform: translateY(80%);
+}
+
+.datePickerDetails {
+    transform: translate(0, 45%);
+}
+
+@media (min-width: 1024px) {
+    .datePickerShort {
+        transform: translateY(60%);
+    }
+
+    .datePickerFull {
+        transform: translateY(60%);
+    }
+
+    .datePickerDetails {
+        transform: translate(-30%, 45%);
+    }
+}
+
+.calendarContainer {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monthContainer {
+    width: 336px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.monthDrawer {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    user-select: none;
+}
+
+.prevMonth {
+    width: 14px;
+    height: 23px;
+    background-image: url("../images/calendar/prev_month.png");
+    cursor: pointer;
+}
+
+.nextMonth {
+    width: 14px;
+    height: 23px;
+    background-image: url("../images/calendar/next_month.png");
+    cursor: pointer;
+}
+
+.daysContainer {
+    width: 336px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.dayName {
+    width: 48px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.textName {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    user-select: none;
+}
+
+.datesContainer {
+    width: 336px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dateRow {
+    width: 336px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dateNumber {
+    width: 48px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dateNumberEmpty {
+    width: 48px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dateNumber:hover {
+    border-radius: 1000px;
+    background-color: #E2E2E2;
+}
+
+.dateInRange {
+    background: #00B2FF;
+    opacity: 0.3;
+}
+
+.dateRangeFirst {
+    background: #00B2FF;
+    border-radius: 1000px 0 0 1000px;
+}
+
+.dateRangeLast {
+    background: #00B2FF;
+    border-radius: 0 1000px 1000px 0;
+}
+
+.textDate {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    user-select: none;
+}

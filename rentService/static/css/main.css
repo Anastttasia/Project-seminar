@@ -1,0 +1,1122 @@
+/*Общие стили*/
+
+body {
+    font-family: 'Montserrat', normal;
+    margin: 0;
+    padding: 0;
+}
+
+.flexConCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexColStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.flexConRowCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.flexConRowStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    font-family: "MontserratExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 70px;
+    color: #FFFFFF;
+    margin: 3rem 0 0 0;
+}
+
+h2 {
+    margin-top: 7rem;
+    text-align: start;
+    font-family: 'MontserratExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    color: #1E1E1E;
+}
+
+h3 {
+    font-family: 'MontserratBold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 4rem;
+}
+
+input[type="radio"] {
+    accent-color: #00B2FF;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+}
+
+
+.inputDataGuest {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0.5rem 0;
+}
+
+.inputDataGuestPromo {
+    background-color: #F0F0F0;
+    border: none;
+    width: 100%;
+}
+
+.inputDataGuest::placeholder {
+    color: #000000;
+}
+
+.lableInputDataGuest {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    opacity: 0.8;
+}
+
+/*Модальное окно-меню*/
+.modalMenu {
+    display: none;
+    background-color: #1E1E1E;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+}
+
+.btmMenuClose {
+    border: none;
+    background-color: transparent;
+    background-image: url("../images/cross.svg");
+    width: 40px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btmMenuClose:hover {
+    opacity: 0.75;
+}
+
+.modalContent {
+    width: 100%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.linkModalMenu {
+    font-family: 'MontserratExtraBold';
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 1rem 0;
+    text-decoration: none;
+}
+
+.linkModalMenu:hover {
+    opacity: 0.75;
+}
+
+.languageBlock {
+    margin: 0 3rem 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.languageImg {
+    width: 34px;
+    height: 34px;
+    margin-right: 0.3rem;
+}
+
+.languageText {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.notActive {
+    opacity: 0.70;
+}
+
+/*Header*/
+.headerBig {
+    width: 100%;
+    height: 80vh;
+    background-image: url("../images/backgrounds/header_big.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: none;
+    box-sizing: border-box;
+}
+
+.headerSmall {
+    background-image: url("../images/backgrounds/header_mini_1280.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: none;
+    box-sizing: border-box;
+    min-height: 220px;
+}
+
+.headerMedium {
+    background-image: url("../images/backgrounds/header_mini_1280.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: none;
+    box-sizing: border-box;
+    min-height: 600px;
+}
+
+@media (min-width: 1281px) {
+    .headerSmall {
+        background-image: url("../images/backgrounds/header_mini_1920.svg");
+    }
+
+    .headerMedium {
+        background-image: url("../images/backgrounds/header_mini_1920.svg");
+    }
+}
+
+@media (min-width: 1921px) {
+    .headerSmall {
+        background-image: url("../images/backgrounds/header_mini_2560.svg");
+    }
+
+    .headerMedium {
+        background-image: url("../images/backgrounds/header_mini_2560.svg");
+    }
+}
+
+@media (min-width: 2561px) {
+    .headerSmall {
+        background-image: url("../images/backgrounds/header_mini_3840.svg");
+    }
+
+    .headerMedium {
+        background-image: url("../images/backgrounds/header_mini_3840.svg");
+    }
+}
+
+.headerMediumFormContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    border: none;
+    box-sizing: border-box;
+}
+
+.logoImg {
+    width: 100px;
+    height: 75px;
+}
+
+.btmMenu {
+    border: none;
+    background-color: transparent;
+    background-image: url("../images/menu.svg");
+    width: 40px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btmMenu:hover {
+    opacity: 0.70;
+}
+
+.logoMenu {
+    width: 40px;
+    height: 26px;
+}
+
+main {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.startBanner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.txtBanner {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0rem;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.contentDetails {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+/*Форма на начальной странице*/
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.formMiddle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formApart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.inputBlock {
+    font-family: 'MontserratBold';
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.inputBlock:hover {
+    background-color: #D0D0D0;
+}
+
+.inputBlockDetails {
+    font-family: 'MontserratBold';
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.inputBlockDetails:hover {
+    background-color: #D0D0D0;
+}
+
+.formIcon {
+    width: 35px;
+    height: 32px;
+    margin: 0 1rem 0 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.btn {
+    width: 100%;
+    background-color: #00B2FF;
+    font-family: 'MontserratBold';
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 60px;
+    border: none;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #006AFF;
+}
+
+/*Каталог апартаментов*/
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/*Слайдер*/
+.slider {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    column-gap: 1rem;
+}
+
+.sliderCard {
+    width: 230px;
+    height: 310px;
+}
+
+.sliderCard:hover .sliderpriceDec {
+    color: #006AFF;
+}
+
+.sliderCardImg {
+    width: 230px;
+    height: 230px;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.sliderCardPrice {
+    font-family: 'MontserratBold';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0.5rem 0 0 0;
+}
+
+.sliderpriceDec {
+    font-family: 'Montserrat';
+    margin: 0.5rem 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: rgba(0, 0, 0, 0.486);
+    font-size: 18px;
+}
+
+/*Ссылка - блок для правил*/
+.rulesBlock {
+    max-width: 100%;
+    width: 100%;
+    height: 80px;
+    background-color: #F0F0F0;
+    border-radius: 15px;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin: 4rem 0 0 0;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rulesBlock p {
+    font-family: 'MontserratBold';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.rulesBlock:hover {
+    background-color: #D0D0D0;
+}
+
+/*Блок часто задаваемых вопросов*/
+.questionBlock {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.questionBlock:hover .questionSign {
+    color:#006AFF;
+}
+
+.questionBlock:hover .questionBlockText {
+    color:#006AFF;
+}
+
+.questionBlockHeader {
+    max-width: 100%;
+    width: 100%;
+    height: 80px;
+}
+
+.questionSign {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+    min-width: 46px;
+    text-align: center;
+}
+
+.questionBlockText {
+    font-family: 'MontserratBold';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.questionAnswer {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 40px;
+    display: none;
+}
+
+/*Footer*/
+.footerBackground {
+    background-image: url("../images/backgrounds/footer_1280.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 1281px) {
+    .footerBackground {
+        background-image: url("../images/backgrounds/footer_1920.svg");
+    }
+}
+
+@media (min-width: 1921px) {
+    .footerBackground {
+        background-image: url("../images/backgrounds/footer_2560.svg");
+    }
+}
+
+@media (min-width: 2561px) {
+    .footerBackground {
+        background-image: url("../images/backgrounds/footer_3840.svg");
+    }
+}
+
+footer {
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+.footerP {
+    width: 100%;
+    margin: 0.25rem 0 0 2rem;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.footerLogoBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.footerLinkBlock {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footerLink {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0.5rem 0;
+}
+
+.footerLink:hover {
+    color: #D0D0D0;
+}
+
+.footerLanguageBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.footerLanguageBlock p{
+    font-size: 16px;
+    color: #000000;
+}
+
+/*Стили для фильтров поиска*/
+.filterBtn {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    border: 1px solid #D5D5D5;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin: 0.5rem;
+    max-width: 370px;
+}
+
+.filterBtn img {
+    width: 28px;
+    height: 27px;
+    margin: 0 1rem 0 0;
+}
+
+.filterBtnText {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.btnBack {
+    width: 100%;
+    font-size: 18px;
+    color: #000;
+    opacity: 0.4;
+    margin: 2rem 0 0.5rem 0;
+}
+
+.btnFilterBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/*Стили для просмотра апартамента*/
+.btnBack {
+    width: 100%;
+    font-size: 18px;
+    color: #000;
+    opacity: 0.4;
+    margin: 2rem 0 0.5rem 0;
+    text-decoration: none;
+}
+
+.imgArrBlock {
+    position: relative;
+}
+
+.bannerBlock {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.infoBanner {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin: 1rem 0.5rem;
+    font-weight: 700;
+}
+
+.arrow {
+    background-color: transparent;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.left-arrow {
+    left: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.right-arrow {
+    right: 10px;
+    /* Отступ справа */
+    border-radius: 5px 0 0 5px;
+    /* Скругление слева */
+}
+
+.infoBlockApart {
+    display: flex;
+    flex-direction: column;
+}
+
+.ratingBlockApart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardPart {
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgBlock {
+    border-radius: 20px;
+}
+
+.imgBig {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.imgMini {
+    width: 80px;
+    height: 77px;
+    border-radius: 8px;
+    margin: 0 0.25rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.imgBlockMini {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.btnSeeMore {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: underline;
+}
+
+.btnSeeMore:hover {
+    color: #00B2FF;
+}
+
+.formIconStar {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.25rem;
+}
+
+.ratingBlockApart {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 0.774);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.ratingBlockApart img {
+    height: 24px;
+    width: 24px;
+    margin: 0 0.5rem 0 0;
+}
+
+.ratingBlockApart p {
+    margin: 0;
+}
+
+.infApartBl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formGuest {
+    margin: 0 0 3rem 0;
+}
+
+.logoImgFinal {
+    width: 26px;
+    height: 26px;
+    margin-right: 1rem;
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+}
+
+.containerFile {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.rentSettings
+{
+    width: 100%;
+    max-width: 780px;
+
+}
+
+/*Стили для отображения на компьютере*/
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 49px;
+    }
+
+    h3 {
+        margin-top: 6rem;
+    }
+
+    .footerLanguageBlock p{
+        color: #FFFFFF;
+    }
+
+    .modalMenu {
+        width: 40vw;
+        padding: 3rem 5rem 3rem 3rem;
+    }
+
+    headerContainer {
+        padding: 1rem 9rem;
+    }
+
+    .startBanner {
+        height: 80vh;
+        justify-content: center;
+    }
+
+    .content {
+        justify-content: center;
+        max-width: 1010px;
+    }
+
+    .contentDetails {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1210px;
+    }
+
+    .txtBanner {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .formMiddle {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .inputBlock {
+        font-size: 18px;
+        height: 70px;
+        margin: 0 1rem 0 0;
+    }
+
+    .inputBlockDetails {
+        font-size: 18px;
+        height: 70px;
+    }
+
+    .btn {
+        height: 70px;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .wrapper {
+        justify-content: space-between;
+        column-gap: 0;
+        row-gap: 4rem;
+    }
+
+    .rulesBlock p {
+        font-size: 24px;
+    }
+
+    .questionBlockText {
+        font-size: 18px;
+    }
+
+    .questionAnswer {
+        font-size: 18px;
+    }
+
+    .questionSign {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .headerMedium
+    {
+        min-height: 400px;
+    }
+
+    footer {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 6rem;
+    }
+
+    .footerLinkBlock {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .footerLink {
+        margin: 0 0.5rem;
+    }
+
+    .btnFilterBlock {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .imgBlock {
+        border-radius: 20px;
+    }
+
+    .imgBig {
+        width: 780px;
+        height: 480px;
+        border-radius: 20px;
+    }
+
+    .imgBlockMini {
+        margin: 0.5rem 2rem;
+    }
+
+    .imgMini {
+        margin: 0;
+    }
+
+    .infApartBl {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ratingBlockApart {
+        width: 30%;
+    }
+
+    .infoBanner {
+        font-size: 18px;
+    }
+
+    .containerDetails {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .formGuest {
+        margin: 0 5rem 0 0;
+    }
+
+    .inputDataGuestPromo {
+        width: 245px;
+    }
+
+    .containerFile {
+        width: 440px;
+        height: 344px;
+    }
+
+    .rentSettings
+    {
+        max-width: 300px;
+        max-height: 400px;
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 35px;
+    }
+}

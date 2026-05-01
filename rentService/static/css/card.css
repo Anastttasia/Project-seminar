@@ -1,0 +1,314 @@
+
+body {
+    font-family: 'Montserrat', normal;
+}
+
+.flexConRowStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*Стили для отображения на мобильном устройстве */
+
+.card {
+    width: 291px;
+    height: 490px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.imgCard {
+    width: 290px;
+    height: 240px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 1rem 0 0 0;
+}
+
+.nameCard {
+    font-family: 'MontserratExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    margin: 0;
+    color: #000000;
+}
+
+.card:hover .nameCard
+{
+    color: #006AFF;
+}
+
+.ratingBlock {
+    height: 24px;
+    width: 58px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 0.774);
+    margin-left: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratingBlock img {
+    height: 24px;
+    width: 24px;
+    margin: 0 0.5rem 0 0;
+}
+
+.ratingBlock p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    margin: 0 0.5rem 0 0;
+}
+
+.descriptionCard {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5rem 0 0 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.priceBlock {
+    width: 100%;
+}
+
+.priceSum {
+    margin: 1rem 0.5rem 1rem 0;
+    font-family: 'MontserratExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 41px;
+    color: #000000;
+}
+
+.priceSumDet {
+    font-family: 'MontserratExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+    color: #000000;
+    margin: 1rem 0.5rem 1rem 0;
+}
+
+
+.priceDec {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.priceDec p {
+    margin: 0;
+}
+
+.btnBook {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 700;
+    width: 100%;
+    background-color: #00B2FF;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 60px;
+    border: none;
+    padding: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btnBook:hover {
+    background-color: #006AFF;
+}
+
+.btnBookDesc {
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.cardDetSer {
+    width: 100%;
+    height: 622px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.imgCardDetSer {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.nameCardDetSer {
+    margin: 0.25rem 0;
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.cardDetSerEdit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.imgIconCardDetSer {
+    width: 28px;
+    height: 28px;
+}
+
+.btnIconCardDetSer {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+
+.priceDecDetSerDet p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0;
+}
+
+
+.styleBox {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 1rem 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.fileSizeText {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+    opacity: 0.54;
+}
+
+/*Стили для отображения на компьютере*/
+@media (min-width: 1024px) {
+    .card {
+        width: 482px;
+        height: 620px;
+    }
+
+    .imgCard {
+        width: 480px;
+        height: 363px;
+    }
+
+    .cardInfo {
+        padding: 1rem 1rem 0;
+        box-sizing: border-box;
+    }
+
+    .nameCard {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .descriptionCard {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .priceSum {
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    .priceDec {
+        font-size: 18px;
+    }
+
+    .btnBook {
+        width: auto;
+        height: 70px;
+        justify-content: flex-start;
+    }
+
+    .cardDetSer {
+        width: 440px;
+    }
+
+    .imgCardDetSer {
+        width: 380px;
+        height: 221px;
+    }
+
+}

@@ -1,0 +1,77 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flexConRowStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/*Стили для отображения на мобильном устройстве */
+.cardService {
+    width: 291px;
+    height: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.imgService {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    margin: 0 1rem 0 0;
+}
+
+.infoCardService {
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+}
+
+.nameService {
+    font-family: 'MontserratBold';
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.descriptionService {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.cardFacilities {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.facilities {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+/*Стили для отображения на компьютере*/
+@media (min-width: 1024px) {
+    .cardService {
+        width: 482px;
+        flex-direction: row;
+    }
+}
