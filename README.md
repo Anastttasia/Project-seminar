@@ -1,15 +1,17 @@
-Первый запуск проекта:
-1) python -m venv .venv
-2) .venv\Scripts\activate.bat
-3) pip install -r requirements.txt
-4) python ./rentService/manage.py runserver
-5) http://127.0.0.1:8000/
-
-Повторный запуск проекта:
-1) .venv\Scripts\activate.bat
-2) python ./rentService/manage.py runserver
+Первый запуск проекта (CMD):
+1) call .\rentService\tools\setup.bat
+2) call .\rentService\tools\run_server.bat (На вопрос о завершении пакетного файла ответ - N(нет))
 3) http://127.0.0.1:8000/
+
+Повторный запуск проекта (CMD):
+1) call .\rentService\tools\run_server.bat (На вопрос о завершении пакетного файла ответ - N(нет))
+2) http://127.0.0.1:8000/
 
 Отключение проекта:
 1) Ctrl + C
-2) deactivate
+
+Очистка БД (CMD):
+1) call .\rentService\tools\revert_database.bat
+
+Пересоздание БД (CMD):
+1) call .\rentService\tools\recreate_database.bat
