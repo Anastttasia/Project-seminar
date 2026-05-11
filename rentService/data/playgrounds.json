@@ -1,0 +1,10 @@
+{
+  "playgrounds": {
+    "basketball_1": {
+      "name": "Только Вверх!",
+      "type": "basketball",
+      "price": 2700,
+      "images": "only_up"
+    }
+  }
+}

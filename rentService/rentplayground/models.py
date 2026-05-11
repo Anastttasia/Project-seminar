@@ -1,3 +1,12 @@
 from django.db import models
 
-# Create your models here.
+class Playground(models.Model):
+    id = models.CharField(max_length=30, primary_key=True)
+    name = models.CharField(max_length=20, default='error')
+    type = models.CharField(max_length=20, default='error')
+    price = models.IntegerField(default=0)
+    images = models.CharField(max_length=20, default='error')
+
+
+class Rent(models.Model):
+    name = models.CharField(max_length=20)
