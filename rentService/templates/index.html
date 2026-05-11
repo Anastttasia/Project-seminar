@@ -94,7 +94,20 @@
 
     <main>
         <div class="content">
-            <h2 style="justify-content: flex-start;">Наши апартаменты</h2>
+            <section class="slider">
+                {% for sport in sports %}
+                    <div class="sliderCard">
+                        <a href="details.html" style="text-decoration: none;"><img class="sliderCardImg" src="/static/images/photo/{{sport.type}}/mini_card.png"></a>
+                        <div class="flexColStart">
+                            <p class="sliderpriceDec">{{ sport.name }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+
+        <div class="content">
+            <h2 style="justify-content: flex-start;">Наши площадки</h2>
 
             <section class="wrapper">
 
@@ -129,300 +142,15 @@
                 </a>
             </section>
         </div>
-
-        <div class="content">
-            <section class="slider">
-                <div class="sliderCard">
-                    <a href="details.html" style="text-decoration: none;"><img class="sliderCardImg" src="{% static "images/photo/ap1.png" %}"></a>
-                    <div class="flexColStart">
-                        <p class="sliderpriceDec">Двухуровневый люкс с 2 спальнями</p>
-                        <p class="sliderCardPrice">60$</p>
-                    </div>
-                </div>
-
-
-                <div class="sliderCard">
-                    <a href="details.html" style="text-decoration: none;"><img class="sliderCardImg" src="{% static "images/photo/ap2.png" %}"></a>
-                    <div class="flexColStart">
-                        <p class="sliderpriceDec">Двухуровневый люкс с 2 спальнями</p>
-                        <p class="sliderCardPrice">50$</p>
-                    </div>
-                </div>
-
-                <div class="sliderCard">
-                    <a href="details.html" style="text-decoration: none;"><img class="sliderCardImg" src="{% static "images/photo/ap3.png" %}"></a>
-                    <div class="flexColStart">
-                        <p class="sliderpriceDec">Двухуровневый люкс с 2 спальнями</p>
-                        <p class="sliderCardPrice">60$</p>
-                    </div>
-                </div>
-
-                <div class="sliderCard">
-                    <a href="details.html" style="text-decoration: none;"><img class="sliderCardImg" src="{% static "images/photo/ap4.png" %}"></a>
-                    <div class="flexColStart">
-                        <p class="sliderpriceDec">Двухуровневый люкс с 2 спальнями</p>
-                        <p class="sliderCardPrice">40$</p>
-                    </div>
-                </div>
-
-            </section>
-        </div>
-
-        <div class="content">
-            <h2 style="justify-content: flex-start;">Особый сервис</h2>
-            <div class="wrapper" style="grid-template-rows: auto; row-gap: 1rem;">
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/bedroom.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Спальня</p>
-                        <p class="descriptionService">Удобные кровати с ортопедическими матрасами и качественным свежим
-                            бельем гарантируют отличный отдых и комфортный сон.</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/view.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Потрясающий вид</p>
-                        <p class="descriptionService">Все апартаменты имеют панорамное остекленение, вид на море и
-                            балкон, где вы насладитесь
-                            незабываемыми закатами</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/kitchen.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Кухня</p>
-                        <p class="descriptionService">Все необходимое позволит приготовить еду не выходя из дома:
-                            посуда, бокалы, кастрюли,
-                            сковороды, столовые приборы.</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/room_size.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Пространство</p>
-                        <p class="descriptionService">Минимальная площадь от 40 м², просторные гостиные, раздельные
-                            спальни и санузлы подарят
-                            ощущение свободы.</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/bathroom.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Ванная</p>
-                        <p class="descriptionService">Гель для душа, мыло, шампунь, фен, свежие полотенца, а также
-                            горячая вода без перебоев обеспечат комфорт в ванной.</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/appliances.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Техника</p>
-                        <p class="descriptionService">Телевизор, холодильник, кофе-машина, посудомоечная машина, СВЧ
-                            и другая техника.</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/work_place.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Рабочее место</p>
-                        <p class="descriptionService">Высокоскоростной Wi-Fi и рабочая зона с местом для ноутбука
-                            позволят с удобством провести рабочие часы.</p>
-                    </div>
-                </div>
-
-                <div class="cardService">
-                    <div class="imgService" style="background-image: url('../static/images/service_features/wash_clothes.svg');"></div>
-                    <div class="infoCardService">
-                        <p class="nameService">Свежий образ</p>
-                        <p class="descriptionService">Возможность выглядеть на все 100: в апартаментах есть
-                            стиральная машина, утюг, гладильная доска и вместительные платяные шкафы для одежды.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="content">
-            <a href="rules.html" class="rulesBlock">
-                <p>Посмотреть правила проживания</p>
-                <img class="" src="{% static "images/arrow.svg" %}">
-            </a>
-        </div>
-
-        <div class="content">
-            <h2 style="justify-content: flex-start;">Отзывы</h2>
-            <section class="wrapper" style="row-gap: 1rem">
-                <div class="cardReview">
-
-                    <div class="cardInfoReview">
-
-                        <section class="flexConRowCenter" style="justify-content:space-between; width: 100%;">
-                            <div>
-                                <p class="nameCardReview">Влада</p>
-                                <p class="discriptionCardReview">ноябрь 2025 · 3 ночи</p>
-                            </div>
-
-                            <div class="flexConRowCenter ratingBlock">
-                                <img src="{% static "images/star1.svg" %}" class="formIcon">
-                                <p>5.0</p>
-                            </div>
-                        </section>
-                        <div class="descriptionReviewBlock">
-                            <p class="descriptionReview">Квартира идеально плье очен подхорудовано и предлагает ви фа
-                                особенно
-                                расслабляющим. Жилье очен подхорудовано и предлагает ви фа особе подхорудовано и
-                                предлагает ви фа
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="cardReview">
-
-                    <div class="cardInfoReview">
-
-                        <section class="flexConRowCenter" style="justify-content:space-between; width: 100%;">
-                            <div>
-                                <p class="nameCardReview">Влада</p>
-                                <p class="discriptionCardReview">ноябрь 2025 · 3 ночи</p>
-                            </div>
-
-                            <div class="flexConRowCenter ratingBlock">
-                                <img src="{% static "images/star1.svg" %}" class="formIcon">
-                                <p>5.0</p>
-                            </div>
-                        </section>
-                        <div class="descriptionReviewBlock">
-                            <p class="descriptionReview">Квартира идеально плье очен подхорудовано и предлагает ви фа
-                                особенно
-                                расслабляющим. Жилье очен подхорудовано и предлагает ви фа особе подхорудовано и
-                                предлагает
-                                ви фа
-                                особенно расслабляющим. Жилье очен подхорудовано и предлагает ви фа особенно
-                                расслабляющим.
-                                Жилье
-                                очен подхорудовано и предлагает ви фа особенно расслабляющим. Жилье очен подхорудовано и
-                                предлагает
-                                ви фа особенно расслабляющим. Жилье оченнно расслабляющим. Жилье оченви фа особенно
-                                расслабляющим.
-                                Жилье очень хорошо оборудовано и предлагает в ви фа особенно расслабляющим. Жилье очень
-                                хорошо
-                                оборудовано и предлагает в расслабляющим. Жилье очень хорошо оборудовано и предлагает
-                                все
-                                необходимое для спокойного отдыха. Мы чувствовали себя очень комфортно и обязательно
-                                забронируем
-                                квартиру снова.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <section style="width: 100%;">
-                    <button class="btnBook" style="font-size: 18px; padding: 0 2rem;"><p class="btnBookDesc">Читать 256 отзывов</p></button>
-                </section>
-            </section>
-
-        </div>
-
-        <div class="content">
-            <h2 style="justify-content: flex-start;">Частые вопросы</h2>
-            <section style="margin-bottom: 6rem;">
-                <p style="font-size: 18px;">
-                    Мы собрали наиболее частые вопросы и дали развернутые ответы на них. Не спешите, ознакомьтесь со
-                    всей информацией, а когда будете готовы, оставьте заявку. Мы познакомим вас с рынком посуточной и
-                    краткосрочной аренды в Батуми, поделимся своими знаниями, расскажем инсайты и поможем с арендой!
-                </p>
-
-                <div class="questionBlock">
-                    <div class="questionBlockHeader flexConRowStart" style="justify-content:space-between;">
-                        <p class="questionBlockText">В какое время заселение и выезд?</p>
-                        <p class="questionSign">+</p>
-                    </div>
-                    <p class="questionAnswer">Время</p>
-                </div>
-
-                <div class="questionBlock">
-                    <div class="questionBlockHeader flexConRowStart" style="justify-content:space-between;">
-                        <p class="questionBlockText">Можно ли к вам с домашними животными?</p>
-                        <p class="questionSign">+</p>
-                    </div>
-                    <p class="questionAnswer">Да</p>
-                </div>
-
-                <div class="questionBlock">
-                    <div class="questionBlockHeader flexConRowStart" style="justify-content:space-between;">
-                        <p class="questionBlockText">Что вы оставляете на кухне?</p>
-                        <p class="questionSign">+</p>
-                    </div>
-                    <p class="questionAnswer">Классные апартаменты с невероятным, захватывающим дух видом! Очень красиво и чисто. Сидеть на балконе и смотреть на море - чудесно! И очень приятно видеть море из окна сразу после сна на белоснежных простынях. Расположение удобное, до моря 2 минуты. Всё понравилось! Благодарим хозяев за гостеприимство, спасибо!</p>
-                </div>
-
-                <div class="questionBlock">
-                    <div class="questionBlockHeader flexConRowStart" style="justify-content:space-between;">
-                        <p class="questionBlockText">Какие правила отмены бронирования?</p>
-                        <p class="questionSign">+</p>
-                    </div>
-                    <p class="questionAnswer">Правила отмены:</p>
-                </div>
-
-                <div class="questionBlock">
-                    <div class="questionBlockHeader flexConRowStart" style="justify-content:space-between;">
-                        <p class="questionBlockText">Можно ли у вас оставить багаж?</p>
-                        <p class="questionSign">+</p>
-                    </div>
-                    <p class="questionAnswer">Да</p>
-                </div>
-
-                <div class="questionBlock">
-                    <div class="questionBlockHeader flexConRowStart" style="justify-content:space-between;">
-                        <p class="questionBlockText">От чего зависит стоимость аренды?</p>
-                        <p class="questionSign">+</p>
-                    </div>
-                    <p class="questionAnswer">От следующих факторов:</p>
-                </div>
-
-            </section>
-
-        </div>
-
     </main>
 
     <footer class="footerBackground">
-        <div class="footerLanguageBlock">
-            <img class="languageImg" src="{% static "images/flags/ru.svg" %}">
-            <p>Ru</p>
-        </div>
-
-        <div class="footerLinkBlock">
-            <a class="footerLink" href="index.html">О нас</a>
-            <a class="footerLink" href="apartments.html">Апартаменты</a>
-            <a class="footerLink" href="rules.html">Правила проживания</a>
-            <a class="footerLink" href="">Документы</a>
-            <a class="footerLink" href="">Договор оферты</a>
-        </div>
-
-        <div class="footerLogoBlock">
-            <img src="{% static "images/logo.svg" %}" class="logoImg">
-            <p class="footerP">© БСП Групп, 2025</p>
-        </div>
     </footer>
 
 
     <script src="{% static "js/modal_window.js" %}"></script>
     <script src="{% static "js/calendar.js" %}"></script>
     <script src="{% static "js/person_counter.js" %}"></script>
-    <script src="{% static "js/qna.js" %}"></script>
-
 </body>
 
 </html>
