@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style/textSettings.css">
-    <link rel="stylesheet" href="./src/style/main.css">
-    <link rel="stylesheet" href="./src/style/cardService.css">
-    <link rel="stylesheet" href="./src/style/card.css">
-    <link rel="stylesheet" href="./src/style/review.css">
-    <link rel="stylesheet" href="./src/style/calendar.css">
-    <link rel="stylesheet" href="./src/style/person_counter.css">
+    <link rel="stylesheet" href="{% static "css/textSettings.css" %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/card.css" %}">
+    <link rel="stylesheet" href="{% static "css/cardService.css" %}">
+    <link rel="stylesheet" href="{% static "css/review.css" %}">
+    <link rel="stylesheet" href="{% static "css/calendar.css" %}">
+    <link rel="stylesheet" href="{% static "css/person_counter.css" %}">
     <title>BSP</title>
 </head>
 
@@ -32,17 +33,17 @@
             <section class="flexConRowStart">
 
                 <div class="languageBlock">
-                    <img class="languageImg" src="./src/img/flags/ru.svg">
+                    <img class="languageImg" src="{% static "images/flags/ru.svg" %}">
                     <p class="languageText">Ru</p>
                 </div>
 
                 <div class="languageBlock notActive">
-                    <img class="languageImg" src="./src/img/flags/us.svg">
+                    <img class="languageImg" src="{% static "images/flags/us.svg" %}">
                     <p class="languageText">Eng</p>
                 </div>
 
                 <div class="languageBlock notActive">
-                    <img class="languageImg" src="./src/img/flags/ka.svg">
+                    <img class="languageImg" src="{% static "images/flags/ka.svg" %}">
                     <p class="languageText">Geo</p>
                 </div>
 
@@ -53,7 +54,7 @@
 
     <header class="headerSmall">
         <div class="headerContainer">
-            <a href="index.html"><img class="logoImg" src="./src/img/logo.svg"></a>
+            <a href="index.html"><img class="logoImg" src="{% static "images/logo.svg" %}"></a>
             <button class="btmMenu" id="openModalBtn"></button>
         </div>
     </header>
@@ -68,7 +69,7 @@
 
                     <div class="infApartBl">
                         <div class="ratingBlockApart">
-                            <img src="./src/img/star1.svg" class="formIconStar">
+                            <img src="{% static "images/star1.svg" %}" class="formIconStar">
                             <p>5.0</p>
                             <p>(4 отзыва)</p>
                         </div>
@@ -86,21 +87,21 @@
                                 </div>
                                 <div class="infoBanner" style="background-color: #C144FF;">Бесплатная отмена</div>
                             </div>
-                            <img src="./src/img/photo/1.jpg" class="imgBig" id="mainPhoto">
-                            <button class="arrow left-arrow" id="prevPhoto"><img src="./src/img/prevPhoto.svg"></button>
-                            <button class="arrow right-arrow" id="nextPhoto"><img src="./src/img/nextPhoto.svg"></button>
+                            <img src="/static/images/playgrounds/{{playground.images}}/1.jpg" class="imgBig" id="mainPhoto">
+                            <button class="arrow left-arrow" id="prevPhoto"><img src="{% static "images/service/prevPhoto.svg" %}"></button>
+                            <button class="arrow right-arrow" id="nextPhoto"><img src="{% static "images/service/nextPhoto.svg" %}"></button>
                         </div>
 
 
                         <div class="imgBlockMini">
-                            <img src="./src/img/photo/1.jpg" class="imgMini">
-                            <img src="./src/img/photo/2.jpg" class="imgMini">
-                            <img src="./src/img/photo/3.jpg" class="imgMini">
-                            <img src="./src/img/photo/4.jpg" class="imgMini">
-                            <img src="./src/img/photo/5.jpg" class="imgMini">
-                            <img src="./src/img/photo/6.jpg" class="imgMini">
-                            <img src="./src/img/photo/7.jpg" class="imgMini">
-                            <img src="./src/img/photo/8.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/1.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/2.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/3.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/4.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/5.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/6.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/7.jpg" class="imgMini">
+                            <img src="/static/images/playgrounds/{{playground.images}}/8.jpg" class="imgMini">
                         </div>
                     </div>
 
@@ -117,124 +118,11 @@
                             </p>
                         </section>
 
-                        <section class="informationBlockApartMin">
 
-                            <h3>Удобства</h3>
-                            <div class="wrapper" style="row-gap: 0; justify-content: flex-start;">
-
-                                <div class="cardFacilities">
-                                    <div class="imgServiceD"></div>
-                                    <p class="facilities">Кухня</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Wi-Fi</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Рабочая зона</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Телевизор</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Стиральная машина</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Сушильная машина</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Можно оставить багаж</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Фен</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Холодильник</p>
-                                </div>
-
-                                <div class="cardFacilities">
-                                    <p class="facilities">Утюг</p>
-                                </div>
-                            </div>
-                        </section>
 
                         <section class="informationBlockApartMin">
                             <h3>Календарь аппартаментов</h3>
                         </section>
-
-                        <section class="informationBlockApartMin">
-                            <h3>Отзывы</h3>
-
-                            <div class="cardReview" style="width: 100%;">
-
-                                <div class="cardInfoReview">
-
-                                    <section class="flexConRowCenter"
-                                        style="justify-content:space-between; width: 100%;">
-                                        <div>
-                                            <p class="nameCardReview">Влада</p>
-                                            <p class="discriptionCardReview">ноябрь 2025 · 3 ночи</p>
-                                        </div>
-
-                                        <div class="flexConRowCenter ratingBlock">
-                                            <img src="./src/img/star1.svg" class="formIcon">
-                                            <p>5.0</p>
-                                        </div>
-                                    </section>
-                                    <div class="descriptionReviewBlock">
-                                        <p class="descriptionReview">Квартира идеально плье очен подхорудовано и
-                                            предлагает
-                                            ви фа особенно
-                                            расслабляющим. Жилье очен подхорудовано и предлагает ви фа особе
-                                            подхорудовано и
-                                            предлагает ви фа
-                                            особенно расслабляющим. Жилье очен подхорудовано и предлагает ви фа особенно
-                                            расслабляющим. Жилье
-                                            очен подхорудовано и предлагает ви фа особенно расслабляющим. Жилье очен
-                                            подхорудовано и предлагает
-                                            ви фа особенно расслабляющим. Жилье оченнно расслабляющим. Жилье оченви фа
-                                            особенно расслабляющим.
-                                            Жилье очень хорошо оборудовано и предлагает в ви фа особенно расслабляющим.
-                                            Жилье очень хорошо
-                                            оборудовано и предлагает в расслабляющим. Жилье очень хорошо оборудовано и
-                                            предлагает все
-                                            необходимое для спокойного отдыха. Мы чувствовали себя очень комфортно и
-                                            обязательно забронируем
-                                            квартиру снова.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <section style="width: 100%; margin-top: 1rem;">
-                                <button class="btnBook" style="font-size: 18px; padding: 0 2rem;"><p class="btnBookDesc">Читать 16 отзывов</p></button>
-                            </section>
-                        </section>
-
-                        <section class="informationBlockApartMin" style="margin-bottom: 5rem;">
-                            <h3>Расположение</h3>
-                            <div style="width: 100%;">
-                                <div class="flexConRowStart" style="align-items:flex-end; margin-bottom: 1rem;">
-                                    <img src="./src/img/iconP.svg"
-                                        style="width: 21px; height: 32px; margin: 0 0.5rem 0 0;">
-                                    <p style="margin: 0;">Автономная Республика Аджария, Батуми, улица Юсуфа Кобаладзе,
-                                        2
-                                    </p>
-                                </div>
-                                <div>
-                                    <img src="./src/img/cart.png" class="imgBig">
-                                </div>
-                            </div>
-                        </section>
-
                     </div>
                 </div>
             </div>
@@ -250,7 +138,7 @@
                     <div id="datePicker" class="datePickerDetails"></div>
 
                     <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24);" id="dateText">
-                        <img src="./src/img/form/date.svg" class="formIcon">
+                        <img src="{% static "images/form/date.svg" %}" class="formIcon">
                         <input class="input" type="hidden" id="start-date-input" name="start-date-input">
                         <input class="input" type="hidden" id="end-date-input" name="end-date-input">
                         <p id="dateTextValue">Дата заезда — выезда</p>
@@ -259,7 +147,7 @@
                     <div id="personsPicker" class="personsCounterContainerDetails"></div>
 
                     <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24);" id="personsText">
-                        <img src="./src/img/form/guests.svg" class="formIcon">
+                        <img src="{% static "images/form/guests.svg" %}" class="formIcon">
                         <input class="input" type="hidden" id="adults-input" name="adults-input">
                         <input class="input" type="hidden" id="children-input" name="children-input">
                         <p id="personsTextValue">Количество гостей</p>
@@ -272,29 +160,12 @@
     </main>
 
     <footer class="footerBackground">
-        <div class="footerLanguageBlock">
-            <img class="languageImg" src="./src/img/flags/ru.svg">
-            <p>Ru</p>
-        </div>
-
-        <div class="footerLinkBlock">
-            <a class="footerLink" href="index.html">О нас</a>
-            <a class="footerLink" href="apartments.html">Апартаменты</a>
-            <a class="footerLink" href="rules.html">Правила проживания</a>
-            <a class="footerLink" href="">Документы</a>
-            <a class="footerLink" href="">Договор оферты</a>
-        </div>
-
-        <div class="footerLogoBlock">
-            <img src="./src/img/logo.svg" class="logoImg">
-            <p class="footerP">© БСП Групп, 2025</p>
-        </div>
     </footer>
 
-    <script src="./src/scripts/modal_window.js"></script>
-    <script src="./src/scripts/calendar.js"></script>
-    <script src="./src/scripts/person_counter.js"></script>
-    <script src="./src/scripts/photo_controller.js"></script>
+    <script src="{% static "js/modal_window.js" %}"></script>
+    <script src="{% static "js/calendar.js" %}"></script>
+    <script src="{% static "js/person_counter.js" %}"></script>
+    <script src="{% static "js/photo_controller.js" %}"></script>
 </body>
 
 </html>

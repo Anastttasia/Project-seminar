@@ -72,52 +72,39 @@
 
     <main>
         <div class="content">
-            <section class="slider">
-                {% for sport in sports %}
-                    <div class="sliderCard">
-                        <a href="details.html" style="text-decoration: none;"><img class="sliderCardImg" src="/static/images/photo/{{sport.type}}/mini_card.png"></a>
-                        <div class="flexColStart">
-                            <p class="sliderpriceDec">{{ sport.name }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-            </section>
-        </div>
-
-        <div class="content">
             <h2 style="justify-content: flex-start;">Наши площадки</h2>
 
             <section class="wrapper">
 
-                <a href="details.html" style="text-decoration: none;">
-                    <div class="card">
-                        <img class="imgCard" src="{% static "images/photo/apart1.jpg" %}" class="formIcon">
+                {% for playground in playgrounds %}
+                    <a href="details?id={{playground.id}}" style="text-decoration: none;">
+                        <div class="card">
+                            <img class="imgCard" src="/static/images/playgrounds/{{playground.images}}/main_page.png" class="formIcon">
 
-                        <div class="cardInfo">
-                            <section class="flexConRowCenter">
-                                <p class="nameCard">Двухуровневый люкс с 2 спальнями</p>
-                                <div class="ratingBlock">
-                                    <img src="{% static "images/star1.svg" %}" class="formIcon">
-                                    <p>5.0</p>
-                                </div>
-                            </section>
-
-                            <p class="descriptionCard">86 м² · 2 кровати · 1 ванная · Балкон · Быстрое заселение</p>
-
-                            <section style="width: 100%;">
-                                <section class="flexConRowStart priceBlock">
-                                    <p class="priceSum">90$</p>
-                                    <section class="priceDec" style="justify-content:flex-start">
-                                        <p>за 1 ночь</p>
-                                        <p>включая налоги и сборы</p>
-                                    </section>
+                            <div class="cardInfo">
+                                <section class="flexConRowCenter">
+                                    <p class="nameCard">{{playground.name}}</p>
+                                    <div class="ratingBlock">
+                                        <img src="{% static "images/star1.svg" %}" class="formIcon">
+                                        <p>5.0</p>
+                                    </div>
                                 </section>
-                                <button class="btnBook"><p class="btnBookDesc">Проверить наличие</p></button>
-                            </section>
 
+                                <section style="width: 100%;">
+                                    <section class="flexConRowStart priceBlock">
+                                        <p class="priceSum">{{playground.price}}</p>
+                                        <section class="priceDec" style="justify-content:flex-start">
+                                            <p>за 1 час</p>
+                                            <p>включая налоги и сборы</p>
+                                        </section>
+                                    </section>
+                                    <button class="btnBook"><p class="btnBookDesc">Проверить наличие</p></button>
+                                </section>
+
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                {% endfor %}
             </section>
         </div>
     </main>
