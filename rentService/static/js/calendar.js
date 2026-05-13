@@ -35,14 +35,89 @@ let currentURL = new URL(window.location.href);
 const DATE_PICKER_ELEMENT = document.getElementById('datePicker');
 const DATE_TEXT_ELEMENT = document.getElementById('dateText');
 
-
 const TODAY = new Date();
 let startDate = new Date(TODAY.getFullYear(), TODAY.getMonth(), 1);
 
-let startSelectedPeriodDate = null;
+let idPlayground = document.getElementById('idPlayground').value;
+
+let dateData = null;
+
+function getFormatDateForHTTP(date) {
+
+  var dd = date.getDate();
+  if (dd < 10) dd = '0' + dd;
+
+  var mm = date.getMonth() + 1;
+  if (mm < 10) mm = '0' + mm;
+
+  var yy = date.getFullYear() % 100;
+  if (yy < 10) yy = '0' + yy;
+
+  return date.getFullYear() + '-' + mm + '-' + dd;
+}
+
+async function getDateData() {
+    if (startSelectedPeriodDate == null) return;
+
+    await fetch(window.location.origin + '/getDateData', {headers: { rentDate: getFormatDateForHTTP(startSelectedPeriodDate), idPlayground: idPlayground}})
+        .then(response => response.json())
+        .then(function(data) {
+            dateData = data;
+    });
+}
+
+/**/
+
+
+let startSelectedPeriodDate = TODAY;
 let endSelectedPeriodDate = null;
 
 let isFullCalendar = false;
+
+function setRented()
+{
+
+    fetch(window.location.origin + '/createRent', {headers: { rentDate: getFormatDateForHTTP(startSelectedPeriodDate), idPlayground: idPlayground, rentHour: event.currentTarget.id}});
+
+
+    event.currentTarget.classList.remove("busyHour", "freeHour");
+    event.currentTarget.classList.add("rentHour");
+}
+
+async function createRentHours()
+{
+    await getDateData();
+
+    const hoursRentedElement = document.getElementById('hoursRented');
+    hoursRentedElement.replaceChildren();
+    for (let i = 9; i < 21; i++)
+    {
+        let hourElement = document.createElement('div');
+        hourElement.id = i;
+        let hourTextElement = document.createElement('div');
+        let emptyDivElement = document.createElement('div');
+
+        hourElement.classList.add("hourText");
+        emptyDivElement.classList.add("emptyDiv");
+
+        hourTextElement.textContent = i + ':00 - ' + (i + 1) + ':00';
+        if (dateData['rentedHours'].includes(i))
+        {
+            hourElement.classList.add("busyHour");
+        }
+        else
+        {
+            hourElement.classList.add("freeHour");
+        }
+        hourElement.append(emptyDivElement);
+        hourElement.append(hourTextElement);
+        hourElement.append(hourTextElement);
+
+        hourElement.onclick = setRented;
+
+        hoursRentedElement.append(hourElement);
+    }
+}
 
 function setDateUrlParams()
 {
@@ -126,17 +201,10 @@ document.addEventListener('click', (event) => {
     DATE_PICKER_ELEMENT.style.display = 'none'
 });
 
-if (window.screen.width > 800)
-{
-    DATE_PICKER_ELEMENT.classList.add("datePickerFull");
-    DATE_PICKER_ELEMENT.style.display = 'none';
-    isFullCalendar = true;
-}
-else
-{
-    DATE_PICKER_ELEMENT.classList.add("datePickerShort");
-    DATE_PICKER_ELEMENT.style.display = 'none';
-}
+
+DATE_PICKER_ELEMENT.classList.add("datePickerShort");
+DATE_PICKER_ELEMENT.style.display = 'none';
+
 
 if (DATE_TEXT_ELEMENT == null)
 {
@@ -191,17 +259,13 @@ function updateDateText()
 
     if (dateTextValueElement != null)
     {
-        if (startSelectedPeriodDate != null && endSelectedPeriodDate != null)
+        if (startSelectedPeriodDate != null)
         {
-            dateTextValueElement.textContent = getFormatDate(startSelectedPeriodDate) + ' - ' + getFormatDate(endSelectedPeriodDate);
-        }
-        else if (startSelectedPeriodDate != null)
-        {
-            dateTextValueElement.textContent = getFormatDate(startSelectedPeriodDate) + ' - ';
+            dateTextValueElement.textContent = getFormatDate(startSelectedPeriodDate);
         }
         else
         {
-            dateTextValueElement.textContent = 'Дата заезда — выезда';
+            dateTextValueElement.textContent = 'Дата бронирования';
         }
     }
 }
@@ -222,23 +286,8 @@ function updateDateValuesInputs()
 }
 
 function clickOnDate(event) {
-    if (startSelectedPeriodDate == null)
-    {
-        startSelectedPeriodDate = event.currentTarget.dateValue;
-        updateCalendar();
-    }
-    else if (endSelectedPeriodDate == null)
-    {
-        endSelectedPeriodDate = event.currentTarget.dateValue;
-        trySwapRangeDates();
-        updateCalendar();
-    }
-    else
-    {
-        startSelectedPeriodDate = null;
-        endSelectedPeriodDate = null;
-        updateCalendar();
-    }
+    startSelectedPeriodDate = event.currentTarget.dateValue;
+    updateCalendar();
 
     updateDateValuesInputs();
     updateDateText();
@@ -511,6 +560,7 @@ function updateCalendar()
         oldDatesContainer2.remove();
         calendarContainer2.append(datesContainer2);
     }
+    createRentHours();
 }
 
 function setNextMonth() {
@@ -666,6 +716,7 @@ function createCalendar(isSecondCalendar) {
 
     calendarContainer.append(datesContainer);
     DATE_PICKER_ELEMENT.append(calendarContainer);
+    createRentHours();
 }
 
 readDateUrlParams();

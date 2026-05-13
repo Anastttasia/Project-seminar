@@ -5,6 +5,12 @@
       "type": "basketball",
       "price": 2700,
       "images": "only_up"
+    },
+    "basketball_2": {
+      "name": "22Только Вверх!",
+      "type": "basketball",
+      "price": 3000,
+      "images": "only_up"
     }
   }
 }

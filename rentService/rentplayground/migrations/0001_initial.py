@@ -59,4 +59,14 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.RunPython(create_first_data),
+        migrations.CreateModel(
+            name='Rent',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('idPlayground', models.CharField(max_length=30)),
+                ('date', models.DateField()),
+                ('hour', models.IntegerField()),
+                ('numberPerson', models.CharField(max_length=30)),
+            ],
+        ),
     ]

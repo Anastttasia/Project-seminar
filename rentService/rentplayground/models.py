@@ -9,4 +9,7 @@ class Playground(models.Model):
 
 
 class Rent(models.Model):
-    name = models.CharField(max_length=20)
+    idPlayground = models.CharField(max_length=30)
+    date = models.DateField()
+    hour = models.IntegerField()
+    numberPerson = models.CharField(max_length=30)

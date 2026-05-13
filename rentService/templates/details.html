@@ -122,11 +122,23 @@
 
                         <section class="informationBlockApartMin">
                             <h3>Календарь аппартаментов</h3>
+                            <div class="formApart">
+                                <div id="datePicker" class="datePickerDetails"></div>
+                                <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24);" id="dateText">
+                                    <img src="{% static "images/form/date.svg" %}" class="formIcon">
+                                    <input class="input" type="hidden" id="start-date-input" name="start-date-input">
+                                    <input class="input" type="hidden" id="end-date-input" name="end-date-input">
+
+                                    <p id="dateTextValue">Дата заезда — выезда</p>
+                                </div>
+                                <div id="hoursRented" class="hoursContainer"></div>
+                            </div>
+                            <input class="input" type="hidden" id="idPlayground" value="{{playground.id}}">
                         </section>
                     </div>
                 </div>
             </div>
-            <div id="rentSettings" class="rentSettings">
+{% comment %}            <div id="rentSettings" class="rentSettings">
                 <p class="priceSumDet" style="margin-bottom: 0.25rem;">990$</p>
                 <section class="priceDecDetSerDet">
                     <p>за 9 ночей</p>
@@ -134,16 +146,6 @@
                 </section>
 
                 <form class="formApart">
-
-                    <div id="datePicker" class="datePickerDetails"></div>
-
-                    <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24);" id="dateText">
-                        <img src="{% static "images/form/date.svg" %}" class="formIcon">
-                        <input class="input" type="hidden" id="start-date-input" name="start-date-input">
-                        <input class="input" type="hidden" id="end-date-input" name="end-date-input">
-                        <p id="dateTextValue">Дата заезда — выезда</p>
-                    </div>
-
                     <div id="personsPicker" class="personsCounterContainerDetails"></div>
 
                     <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24);" id="personsText">
@@ -155,7 +157,7 @@
 
                     <button class="btn">Забронировать</button>
                 </form>
-            </div>
+            </div>{% endcomment %}
         </div>
     </main>
 

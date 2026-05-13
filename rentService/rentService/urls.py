@@ -19,5 +19,7 @@ from rentplayground import views
 
 urlpatterns = [
     path('', views.index),
-    path('details', views.details)
+    path('details', views.details),
+    path('getDateData', views.getDateData),
+    path('createRent', views.createRent),
 ]
