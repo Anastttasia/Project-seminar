@@ -16,52 +16,13 @@
 </head>
 
 <body>
-    <div class="modalMenu" id="modalWindow">
-        <div style="width: 100%; display: flex; justify-content:flex-end">
-            <button class="btmMenuClose" id="closeModalBtn"></button>
-        </div>
-
-        <div class="modalContent">
-
-            <section class="flexColStart">
-                <a class="linkModalMenu" href="apartments.html">Апартаменты</a>
-                <a class="linkModalMenu" href="index.html">О нас</a>
-                <a class="linkModalMenu" href="rules.html">Правила проживания</a>
-                <a class="linkModalMenu" href="">Контакты</a>
-            </section>
-
-            <section class="flexConRowStart">
-
-                <div class="languageBlock">
-                    <img class="languageImg" src="{% static "images/flags/ru.svg" %}">
-                    <p class="languageText">Ru</p>
-                </div>
-
-                <div class="languageBlock notActive">
-                    <img class="languageImg" src="{% static "images/flags/us.svg" %}">
-                    <p class="languageText">Eng</p>
-                </div>
-
-                <div class="languageBlock notActive">
-                    <img class="languageImg" src="{% static "images/flags/ka.svg" %}">
-                    <p class="languageText">Geo</p>
-                </div>
-
-            </section>
-
-        </div>
-    </div>
 
     <header class="headerBig">
-        <div class="headerContainer">
-            <a href="index.html"><img class="logoImg" src="{% static "images/logo.svg" %}"></a>
-            <button class="btmMenu" id="openModalBtn"></button>
-        </div>
         <div class="startBanner">
             <div class="content">
                 <div>
-                    <h1 class="montserrat-extrabold" style="margin: 0;">Black Sea Point — ваш<br>новый опыт в путешествиях</h1>
-                    <p class="txtBanner">Проверьте доступность апартаментов на ваши даты<br>пребывания в Батуми</p>
+                    <h1 class="montserrat-extrabold" style="margin: 0;">PlaySpot— ваш новый опыт в бронировании</h1>
+                    <p class="txtBanner">Проверьте доступность площадок на ваши даты</p>
                 </div>
             </div>
 
@@ -84,10 +45,6 @@
                             <div class="cardInfo">
                                 <section class="flexConRowCenter">
                                     <p class="nameCard">{{playground.name}}</p>
-                                    <div class="ratingBlock">
-                                        <img src="{% static "images/star1.svg" %}" class="formIcon">
-                                        <p>5.0</p>
-                                    </div>
                                 </section>
 
                                 <section style="width: 100%;">

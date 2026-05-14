@@ -16,47 +16,9 @@
 </head>
 
 <body>
-    <div class="modalMenu" id="modalWindow">
-        <div style="width: 100%; display: flex; justify-content:flex-end">
-            <button class="btmMenuClose" id="closeModalBtn"></button>
-        </div>
-
-        <div class="modalContent">
-
-            <section class="flexColStart">
-                <a class="linkModalMenu" href="apartments.html">Апартаменты</a>
-                <a class="linkModalMenu" href="index.html">О нас</a>
-                <a class="linkModalMenu" href="rules.html">Правила проживания</a>
-                <a class="linkModalMenu" href="">Контакты</a>
-            </section>
-
-            <section class="flexConRowStart">
-
-                <div class="languageBlock">
-                    <img class="languageImg" src="{% static "images/flags/ru.svg" %}">
-                    <p class="languageText">Ru</p>
-                </div>
-
-                <div class="languageBlock notActive">
-                    <img class="languageImg" src="{% static "images/flags/us.svg" %}">
-                    <p class="languageText">Eng</p>
-                </div>
-
-                <div class="languageBlock notActive">
-                    <img class="languageImg" src="{% static "images/flags/ka.svg" %}">
-                    <p class="languageText">Geo</p>
-                </div>
-
-            </section>
-
-        </div>
-    </div>
 
     <header class="headerSmall">
-        <div class="headerContainer">
-            <a href="index.html"><img class="logoImg" src="{% static "images/logo.svg" %}"></a>
-            <button class="btmMenu" id="openModalBtn"></button>
-        </div>
+
     </header>
 
     <main>
@@ -64,29 +26,14 @@
 
             <div class="cardPart">
                 <div class="infoBlockApart">
-                    <a href="apartments.html" class="btnBack flexConRowStart">← Все апартаменты</a>
-                    <h2 style="justify-content: flex-start; margin-top: 0; margin-bottom: 25px;">Двухуровневый люкс с 2 спальнями</h2>
+                    <a href="/" class="btnBack flexConRowStart">← Все площадки</a>
+                    <h2 style="justify-content: flex-start; margin-top: 0; margin-bottom: 25px;">{{playground.name}}</h2>
 
-                    <div class="infApartBl">
-                        <div class="ratingBlockApart">
-                            <img src="{% static "images/star1.svg" %}" class="formIconStar">
-                            <p>5.0</p>
-                            <p>(4 отзыва)</p>
-                        </div>
-                        <p class="descriptionCard" style="color: #000; width: 100%;">86 м² · 2 кровати · 1 ванная ·
-                            Балкон · Быстрое
-                            заселение </p>
-                    </div>
                 </div>
 
                 <div class="cardPart">
                     <div class="imgBlock" style="width: 100%; margin-top: 1rem;">
                         <div class="imgArrBlock">
-                            <div class="bannerBlock">
-                                <div class="infoBanner" style="background-color: #4460FF;">Последний свободный номер
-                                </div>
-                                <div class="infoBanner" style="background-color: #C144FF;">Бесплатная отмена</div>
-                            </div>
                             <img src="/static/images/playgrounds/{{playground.images}}/1.jpg" class="imgBig" id="mainPhoto">
                             <button class="arrow left-arrow" id="prevPhoto"><img src="{% static "images/service/prevPhoto.svg" %}"></button>
                             <button class="arrow right-arrow" id="nextPhoto"><img src="{% static "images/service/nextPhoto.svg" %}"></button>
@@ -105,31 +52,35 @@
                         </div>
                     </div>
 
+                    <div id="rentSettings" class="rentSettings" style="display: flex; flex-direction: row; width: 100%; align-items:center; max-width: 460px;">
+                        <p class="priceSumDet" style="margin-bottom: 0.25rem;">{{playground.price}} ₽</p>
+                        <section class="priceDecDetSerDet" style="display: flex;  flex-direction: column; justify-content: flex-start;">
+                            <p>за 1 час</p>
+                            <p>включая налоги и сборы</p>
+                        </section>
+                    </div>
+
                     <div class="informationBlockApart">
                         <section class="informationBlockApartMin">
                             <h3>Информация</h3>
                             <p>
-                                Просторные апартаменты с 2 спальнями, гостиной и кухней для семьи или компании. Общая
-                                площадь 86
-                                м², в апартаментах два санузла и балкон. Апартаменты находятся на 26 этаже здания Orbi
-                                Residence, известного также как «Дом-Волна». Из окон открывается прекрасный вид на крыши
-                                города,
-                                горы и Черное море.
+                                Просторный зал для интенсивных тренировок, командных занятий и регулярной аренды. Подходит для проведения соревнований любого уровня, 
+                                а также для учебно-тренировочного процесса.
                             </p>
                         </section>
 
 
 
-                        <section class="informationBlockApartMin">
-                            <h3>Календарь аппартаментов</h3>
+                        <section class="informationBlockApartMin" style="margin-bottom: 7%;">
+                            <h3>Календарь</h3>
                             <div class="formApart">
                                 <div id="datePicker" class="datePickerDetails"></div>
-                                <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24);" id="dateText">
+                                <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24); display: flex; justify-content:center;" id="dateText">
                                     <img src="{% static "images/form/date.svg" %}" class="formIcon">
                                     <input class="input" type="hidden" id="start-date-input" name="start-date-input">
                                     <input class="input" type="hidden" id="end-date-input" name="end-date-input">
 
-                                    <p id="dateTextValue">Дата заезда — выезда</p>
+                                    <p id="dateTextValue">Дата</p>
                                 </div>
                                 <div id="hoursRented" class="hoursContainer"></div>
                             </div>

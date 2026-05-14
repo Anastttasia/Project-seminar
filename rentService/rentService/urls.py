@@ -18,8 +18,11 @@ from django.urls import path
 from rentplayground import views
 
 urlpatterns = [
+    # страницы
     path('', views.index),
     path('details', views.details),
+
+    # POST запросы
     path('getDateData', views.getDateData),
     path('createRent', views.createRent),
 ]

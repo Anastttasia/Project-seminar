@@ -1,16 +1,29 @@
 {
   "playgrounds": {
     "basketball_1": {
-      "name": "Только Вверх!",
+      "name": "Баскетбольная площадка “Только Вверх!”",
       "type": "basketball",
       "price": 2700,
       "images": "only_up"
     },
     "basketball_2": {
-      "name": "22Только Вверх!",
+      "name": "Баскетбольная площадка “Команда”",
       "type": "basketball",
       "price": 3000,
-      "images": "only_up"
+      "images": "team"
+    }
+    ,
+    "basketball_3": {
+      "name": "Футбольная площадка “Стойкость”",
+      "type": "football",
+      "price": 3500,
+      "images": "durability"
+    },
+    "basketball_4": {
+      "name": "Волейбольная площадка “Сила”",
+      "type": "volleyball",
+      "price": 3700,
+      "images": "power"
     }
   }
 }

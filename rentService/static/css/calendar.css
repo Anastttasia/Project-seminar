@@ -82,7 +82,7 @@ body {
 }
 
 .datePickerDetails {
-    transform: translate(0, 45%);
+    transform: translate(0, -30%);
 }
 
 @media (min-width: 1024px) {
@@ -95,7 +95,7 @@ body {
     }
 
     .datePickerDetails {
-        transform: translateY(-60%);
+        transform: translateY(-30%);
     }
 }
 
