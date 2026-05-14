@@ -12,4 +12,5 @@ class Rent(models.Model):
     idPlayground = models.CharField(max_length=30)
     date = models.DateField()
     hour = models.IntegerField()
+    namePerson = models.CharField(max_length=30)
     numberPerson = models.CharField(max_length=30)

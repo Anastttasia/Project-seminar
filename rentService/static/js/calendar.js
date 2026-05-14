@@ -35,6 +35,9 @@ let currentURL = new URL(window.location.href);
 const DATE_PICKER_ELEMENT = document.getElementById('datePicker');
 const DATE_TEXT_ELEMENT = document.getElementById('dateText');
 
+const RENT_DATE_ELEMENT = document.getElementById('rentDate');
+const RENT_HOURS_ELEMENT = document.getElementById('rentHours');
+
 const TODAY = new Date();
 let startDate = new Date(TODAY.getFullYear(), TODAY.getMonth(), 1);
 
@@ -70,6 +73,7 @@ async function getDateData() {
 
 
 let startSelectedPeriodDate = TODAY;
+RENT_DATE_ELEMENT.value = getFormatDateForHTTP(startSelectedPeriodDate);
 let endSelectedPeriodDate = null;
 
 let isFullCalendar = false;
@@ -77,11 +81,10 @@ let isFullCalendar = false;
 function setRented()
 {
 
-    fetch(window.location.origin + '/createRent', {headers: { rentDate: getFormatDateForHTTP(startSelectedPeriodDate), idPlayground: idPlayground, rentHour: event.currentTarget.id}});
-
-
+    //fetch(window.location.origin + '/createRent', {headers: { rentDate: getFormatDateForHTTP(startSelectedPeriodDate), idPlayground: idPlayground, rentHour: event.currentTarget.id}});
     event.currentTarget.classList.remove("busyHour", "freeHour");
     event.currentTarget.classList.add("rentHour");
+    RENT_HOURS_ELEMENT.value = RENT_HOURS_ELEMENT.value + event.currentTarget.id + '.';
 }
 
 async function createRentHours()
@@ -108,12 +111,11 @@ async function createRentHours()
         else
         {
             hourElement.classList.add("freeHour");
+            hourElement.onclick = setRented;
         }
         hourElement.append(emptyDivElement);
         hourElement.append(hourTextElement);
         hourElement.append(hourTextElement);
-
-        hourElement.onclick = setRented;
 
         hoursRentedElement.append(hourElement);
     }
@@ -287,6 +289,7 @@ function updateDateValuesInputs()
 
 function clickOnDate(event) {
     startSelectedPeriodDate = event.currentTarget.dateValue;
+    RENT_DATE_ELEMENT.value = getFormatDateForHTTP(startSelectedPeriodDate);
     updateCalendar();
 
     updateDateValuesInputs();
@@ -369,6 +372,8 @@ function isBetweenSelectedDates(date) {
 
 function updateCalendar()
 {
+    RENT_HOURS_ELEMENT.value = '';
+
     const collection = document.getElementsByClassName("monthDrawer");
     let drawerToUpdateCount = collection.length;
 

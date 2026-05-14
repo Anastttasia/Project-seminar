@@ -35,29 +35,42 @@ def getDateData(request):
     return JsonResponse({"rentedHours": rentedHours})
 
 def createRent(request):
-    idPlayground = request.headers.get("idPlayground", None)
-    rentDate = request.headers.get("rentDate", None)
-    rentHour = request.headers.get("rentHour", None)
+    idPlayground = request.POST.get("idPlayground", None)
+    rentDate = request.POST.get("rentDate", None)
+    rentHours = request.POST.get("rentHours", None)
+    name = request.POST.get("name", None)
+    phone = request.POST.get("phone", None)
 
-    if idPlayground is None or rentDate is None or rentHour is None:
+    print(idPlayground, rentDate, rentHours, name, phone)
+
+
+    if idPlayground is None or rentDate is None or rentHours is None or name is None or phone is None:
         return HttpResponseBadRequest()
 
-    try:
-        rent = Rent.objects.get(
-            idPlayground=idPlayground,
-            date=rentDate,
-            hour=rentHour
-        )
-    except Rent.DoesNotExist:
-        rent = None
+    rentHoursList = list()
 
-    if rent is None:
-        Rent.objects.create(
-            idPlayground=idPlayground,
-            date=rentDate,
-            hour=rentHour
-        )
+    for rentHour in rentHours.strip('.').split('.'):
+        if not rentHour.isdigit():
+            return HttpResponseBadRequest()
+        rentHoursList.append(int(rentHour))
 
-        return HttpResponse("OK")
+    for rentHourNumber in rentHoursList:
+        try:
+            rent = Rent.objects.get(
+                idPlayground=idPlayground,
+                date=rentDate,
+                hour=rentHourNumber
+            )
+        except Rent.DoesNotExist:
+            rent = None
 
-    return HttpResponseBadRequest()
+        if rent is None:
+            Rent.objects.create(
+                idPlayground=idPlayground,
+                date=rentDate,
+                hour=rentHourNumber,
+                namePerson=name,
+                numberPerson=phone
+            )
+
+    return render(request, "confirmed.html")

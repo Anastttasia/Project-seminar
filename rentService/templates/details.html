@@ -64,16 +64,17 @@
                         <section class="informationBlockApartMin">
                             <h3>Информация</h3>
                             <p>
-                                Просторный зал для интенсивных тренировок, командных занятий и регулярной аренды. Подходит для проведения соревнований любого уровня, 
+                                Просторный зал для интенсивных тренировок, командных занятий и регулярной аренды. Подходит для проведения соревнований любого уровня,
                                 а также для учебно-тренировочного процесса.
                             </p>
                         </section>
 
 
 
-                        <section class="informationBlockApartMin" style="margin-bottom: 7%;">
+                        <section class="informationBlockApartMin">
                             <h3>Календарь</h3>
-                            <div class="formApart">
+                            <form class="formApart" method="post" action="/createRent">
+                                {% csrf_token %}
                                 <div id="datePicker" class="datePickerDetails"></div>
                                 <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24); display: flex; justify-content:center;" id="dateText">
                                     <img src="{% static "images/form/date.svg" %}" class="formIcon">
@@ -83,8 +84,14 @@
                                     <p id="dateTextValue">Дата</p>
                                 </div>
                                 <div id="hoursRented" class="hoursContainer"></div>
-                            </div>
-                            <input class="input" type="hidden" id="idPlayground" value="{{playground.id}}">
+                                <input class="input" type="hidden" id="idPlayground" name="idPlayground" value="{{playground.id}}">
+                                <input class="input" type="hidden" id="rentDate" name="rentDate" required>
+                                <input class="input" type="hidden" id="rentHours" name="rentHours" required>
+                                <input class="inputBlockDetails" type="text" id="personName" name="name" required placeholder="Имя">
+                                <input class="inputBlockDetails" type="tel" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" required placeholder="+70000000000"/>
+                                <input class="btn" type="submit" required value="Забронировать">
+                            </form>
+
                         </section>
                     </div>
                 </div>

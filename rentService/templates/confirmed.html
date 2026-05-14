@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style/textSettings.css">
-    <link rel="stylesheet" href="./src/style/main.css">
-    <link rel="stylesheet" href="./src/style/cardService.css">
-    <link rel="stylesheet" href="./src/style/card.css">
+    <link rel="stylesheet" href="{% static "css/textSettings.css" %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/card.css" %}">
+    <link rel="stylesheet" href="{% static "css/cardService.css" %}">
     <title>BSP</title>
 </head>
 
@@ -101,7 +102,7 @@
         </div>
     </main>
 
-    <script src="./src/scripts/modal_window.js"></script>
+    <script src="{% static "js/modal_window.js" %}"></script>
 </body>
 
 </html>
