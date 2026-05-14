@@ -32,13 +32,37 @@ body {
     width: 166.55px;
     height: 41px;
     border-radius: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
 }
 
 .hoursContainer {
 
     width: 100%;
 }
+.roaAdmin{
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding: 1rem 0;
+    align-items:center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.roaAdmin p{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
 
 .emptyDiv {
     width: 30px;
@@ -62,6 +86,8 @@ body {
     background: rgba(191, 53, 48, 0.46);
     border: 1px solid rgba(0, 0, 0, 0.18);
     border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .rentHour {

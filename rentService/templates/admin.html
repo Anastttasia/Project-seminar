@@ -32,8 +32,23 @@
                 </div>
 
                 <div class="cardPart">
-                    <div class="informationBlockApart">
-                        <section class="informationBlockApartMin">
+                    <div class="informationBlockApart" style="margin-bottom: 5rem">
+                        <section class="informationBlockApartMin" >
+                            <div style="width: 100%;height: 100%;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 20px;">
+                               <h3 style="text-align: center; margin: 1rem 0;border-bottom: 1px solid gray; padding: 1rem 0; width: 100%;">Статистика</h3>
+                                <div class="formApart" style="display:flex; flex-direction: column;">
+                                    <div class="roaAdmin">
+                                        <p>Прибыль:</p>
+                                        <p style="font-weight: 800;">{{allProfit}}</p>
+                                    </div>
+                                    <div class="roaAdmin" style="border-bottom: none">
+                                        <p>Наиболее популярное время:</p>
+                                        <p style="font-weight: 800;">{{mostPopularTime}}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <h3>Календарь</h3>
                             <div class="formApart">
                                 <div id="datePicker" class="datePickerDetails"></div>

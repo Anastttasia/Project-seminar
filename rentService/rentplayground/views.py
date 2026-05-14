@@ -130,4 +130,19 @@ def admin(request):
     except MultipleObjectsReturned:
         return HttpResponseNotFound("Not Found")
 
-    return render(request, "admin.html", context={"playground": playground})
+    rents = Rent.objects.filter(idPlayground=id)
+
+    allProfit = playground.price * len(rents)
+
+    mostPopularTime = None
+    lenOfRents = 0
+
+    for hour in range(9, 22):
+        lenOfRentsLocal = len(Rent.objects.filter(idPlayground=id, hour=hour))
+
+        if lenOfRentsLocal > lenOfRents:
+            lenOfRents = lenOfRentsLocal
+            mostPopularTime = hour
+
+
+    return render(request, "admin.html", context={"playground": playground, "mostPopularTime": mostPopularTime, "allProfit": allProfit})
