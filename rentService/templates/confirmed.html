@@ -9,57 +9,18 @@
     <link rel="stylesheet" href="{% static "css/main.css" %}">
     <link rel="stylesheet" href="{% static "css/card.css" %}">
     <link rel="stylesheet" href="{% static "css/cardService.css" %}">
-    <title>BSP</title>
+    <title>PlaySpot</title>
 </head>
 
 <body>
-    <div class="modalMenu" id="modalWindow">
-        <div style="width: 100%; display: flex; justify-content:flex-end">
-            <button class="btmMenuClose" id="closeModalBtn"></button>
-        </div>
-
-        <div class="modalContent">
-
-            <section class="flexColStart">
-                <a class="linkModalMenu" href="apartments.html">Апартаменты</a>
-                <a class="linkModalMenu" href="index.html">О нас</a>
-                <a class="linkModalMenu" href="rules.html">Правила проживания</a>
-                <a class="linkModalMenu" href="">Контакты</a>
-            </section>
-
-            <section class="flexConRowStart">
-
-                <div class="languageBlock">
-                    <img class="languageImg" src="./src/img/flags/ru.svg">
-                    <p class="languageText">Ru</p>
-                </div>
-
-                <div class="languageBlock notActive">
-                    <img class="languageImg" src="./src/img/flags/us.svg">
-                    <p class="languageText">Eng</p>
-                </div>
-
-                <div class="languageBlock notActive">
-                    <img class="languageImg" src="./src/img/flags/ka.svg">
-                    <p class="languageText">Geo</p>
-                </div>
-
-            </section>
-
-        </div>
-    </div>
 
     <header class="headerSmall">
-        <div class="headerContainer">
-            <a href="index.html"><img class="logoImg" src="./src/img/logo.svg"></a>
-            <button class="btmMenu" id="openModalBtn"></button>
-        </div>
     </header>
 
     <main style="margin-bottom: 6rem;">
         <div class="content">
             <div class="infoBlockApart">
-                <a href="index.html" class="btnBack flexConRowStart">← На главную</a>
+                <a href="/"  class="btnBack flexConRowStart">← На главную</a>
                 <h2 style="justify-content: flex-start; margin-top: 0;">Бронирование подтверждено!</h2>
             </div>
             <div class="containerDetails">
@@ -70,20 +31,20 @@
                         Мы уже начали готовиться к вашему визиту и ждем вас.
                     </p>
                     <p>
-                        Команда BSP 🖤
+                        Команда Sport 🖤
                     </p>
 
                     <div style="margin-top: 4rem;">
                         <p>Если у вас возникнут вопросы, обращайтесь:</p>
                         <div>
                             <div class="contact">
-                                <img class="logoImgFinal" src="./src/img/phone.svg">
+                                <img class="logoImgFinal" src="{% static "images/phone.svg" %}">
                                 <p>+1 123 123-45-67</p>
                             </div>
 
                             <div class="contact">
-                                <img class="logoImgFinal" src="./src/img/letter.svg">
-                                <p>bsp@example.com</p>
+                                <img class="logoImgFinal" src="{% static "images/letter.svg" %}">
+                                <p>sport@example.com</p>
                             </div>
 
                         </div>
@@ -91,13 +52,14 @@
 
                 </div>
 
-                <div class="containerFile">
-                    <div>{{playground.name}}</div>
-                    <div>{{rentDate}}</div>
+                <div class="containerFile" style="width:400px; height:100%">
+                    <img src="/static/images/playgrounds/{{playground.images}}/1.jpg" class="imgMini" id="mainPhoto" style="width:360px; height:220px">
+                    <div style="font-style: normal;font-weight: 700;font-size: 20px;line-height: 24px;color: #000000;  border-bottom: 1px solid gray; padding: 1rem 0; width: 100%;">{{playground.name}}</div>
+                    <div style="font-style: normal;font-weight: 600;font-size: 20px;line-height: 24px;color: #000000; border-bottom: 1px solid gray; padding: 1rem 0; width: 100%;">{{rentDate}}</div>
                     {% for hour in hours %}
-                        <div>{{hour}}:00-{{hour|add:"1"}}:00</div>
+                        <div style="font-style: normal;font-weight: 600;font-size: 20px;line-height: 24px;color: #000000; border-bottom: 1px solid gray; padding: 1rem 0; width: 100%;">{{hour}}:00-{{hour|add:"1"}}:00</div>
                     {% endfor %}
-                    <div>{{finalPrice}}</div>
+                    <div class="priceSumDet">{{finalPrice}} ₽</div>
                 </div>
 
             </div>

@@ -21,8 +21,11 @@ urlpatterns = [
     # страницы
     path('', views.index),
     path('details', views.details),
+    path('admin', views.admin),
 
     # POST запросы
+    path('getDateDataWithNames', views.getDateDataWithNames),
     path('getDateData', views.getDateData),
     path('createRent', views.createRent),
+    path('delRent', views.delRent),
 ]

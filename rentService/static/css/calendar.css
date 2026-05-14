@@ -2,6 +2,39 @@ body {
     font-family: 'Montserrat', normal;
 }
 
+.nameText {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.phoneText {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.delButton {
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    box-sizing: border-box;
+    width: 166.55px;
+    height: 41px;
+    border-radius: 20px;
+    text-align: center;
+}
+
 .hoursContainer {
 
     width: 100%;
@@ -82,7 +115,7 @@ body {
 }
 
 .datePickerDetails {
-    transform: translate(0, -30%);
+    transform: translate(0, -37%);
 }
 
 @media (min-width: 1024px) {
@@ -95,7 +128,7 @@ body {
     }
 
     .datePickerDetails {
-        transform: translateY(-30%);
+        transform: translateY(-37%);
     }
 }
 

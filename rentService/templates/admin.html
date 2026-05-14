@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/textSettings.css" %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/card.css" %}">
+    <link rel="stylesheet" href="{% static "css/cardService.css" %}">
+    <link rel="stylesheet" href="{% static "css/review.css" %}">
+    <link rel="stylesheet" href="{% static "css/calendar.css" %}">
+    <link rel="stylesheet" href="{% static "css/person_counter.css" %}">
+    <title>BSP</title>
+</head>
+
+<body>
+
+    <header class="headerSmall">
+
+    </header>
+
+    <main>
+        <div class="contentDetails">
+
+            <div class="cardPart">
+                <div class="infoBlockApart">
+                    <a href="/" class="btnBack flexConRowStart">← Все площадки</a>
+                    <h2 style="justify-content: flex-start; margin-top: 0; margin-bottom: 25px;">{{playground.name}}</h2>
+
+                </div>
+
+                <div class="cardPart">
+                    <div class="informationBlockApart">
+                        <section class="informationBlockApartMin">
+                            <h3>Календарь</h3>
+                            <div class="formApart">
+                                <div id="datePicker" class="datePickerDetails"></div>
+                                <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24); display: flex; justify-content:center;" id="dateText">
+                                    <img src="{% static "images/form/date.svg" %}" class="formIcon">
+                                    <input class="input" type="hidden" id="start-date-input" name="start-date-input">
+                                    <input class="input" type="hidden" id="end-date-input" name="end-date-input">
+
+                                    <p id="dateTextValue">Дата</p>
+                                </div>
+                                <div id="hoursRented" class="hoursContainer"></div>
+                                <input type="hidden" id="idPlayground" value="{{playground.id}}">
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footerBackground">
+    </footer>
+
+    <script src="{% static "js/modal_window.js" %}"></script>
+    <script src="{% static "js/calendar_admin.js" %}"></script>
+    <script src="{% static "js/person_counter.js" %}"></script>
+    <script src="{% static "js/photo_controller.js" %}"></script>
+</body>
+
+</html>

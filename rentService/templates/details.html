@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static "css/review.css" %}">
     <link rel="stylesheet" href="{% static "css/calendar.css" %}">
     <link rel="stylesheet" href="{% static "css/person_counter.css" %}">
-    <title>BSP</title>
+    <title>PlaySpot</title>
 </head>
 
 <body>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
 
-                    <div id="rentSettings" class="rentSettings" style="display: flex; flex-direction: row; width: 100%; align-items:center; max-width: 460px;">
+                    <div id="rentSettings" class="rentSettings" style="position:static">
                         <p class="priceSumDet" style="margin-bottom: 0.25rem;">{{playground.price}} ₽</p>
                         <section class="priceDecDetSerDet" style="display: flex;  flex-direction: column; justify-content: flex-start;">
                             <p>за 1 час</p>
@@ -73,7 +73,7 @@
 
                         <section class="informationBlockApartMin">
                             <h3>Календарь</h3>
-                            <form class="formApart" method="post" action="/createRent">
+                            <form class="formApart" method="post" action="/createRent" style="margin-bottom: 4rem;">
                                 {% csrf_token %}
                                 <div id="datePicker" class="datePickerDetails"></div>
                                 <div class="inputBlockDetails" style="border: 1px solid rgba(0, 0, 0, 0.24); display: flex; justify-content:center;" id="dateText">
@@ -84,11 +84,11 @@
                                     <p id="dateTextValue">Дата</p>
                                 </div>
                                 <div id="hoursRented" class="hoursContainer"></div>
-                                <input class="input" type="hidden" id="idPlayground" name="idPlayground" value="{{playground.id}}">
+                                <input class="input" type="hidden" id="idPlayground" name="idPlayground" value="{{playground.id}}" >
                                 <input class="input" type="hidden" id="rentDate" name="rentDate" required>
                                 <input class="input" type="hidden" id="rentHours" name="rentHours" required>
-                                <input class="inputBlockDetails" type="text" id="personName" name="name" required placeholder="Имя">
-                                <input class="inputBlockDetails" type="tel" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" required placeholder="+70000000000"/>
+                                <input class="inputBlockDetails" type="text" id="personName" name="name" required placeholder="Имя" style="border: 1px solid rgba(0, 0, 0, 0.24); display: flex; justify-content:center; margin:1rem 0 0.5rem ">
+                                <input class="inputBlockDetails" type="tel" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" required placeholder="+70000000000" style="border: 1px solid rgba(0, 0, 0, 0.24); display: flex; justify-content:center;margin:0.5rem 0"/>
                                 <input class="btn" type="submit" required value="Забронировать">
                             </form>
 
