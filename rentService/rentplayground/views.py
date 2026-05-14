@@ -47,6 +47,13 @@ def createRent(request):
     if idPlayground is None or rentDate is None or rentHours is None or name is None or phone is None:
         return HttpResponseBadRequest()
 
+    try:
+        playground = Playground.objects.get(id=idPlayground)
+    except ObjectDoesNotExist:
+        return HttpResponseBadRequest()
+    except MultipleObjectsReturned:
+        return HttpResponseBadRequest()
+
     rentHoursList = list()
 
     for rentHour in rentHours.strip('.').split('.'):
@@ -73,4 +80,4 @@ def createRent(request):
                 numberPerson=phone
             )
 
-    return render(request, "confirmed.html")
+    return render(request, "confirmed.html", context={"playground": playground, "hours": rentHoursList, "finalPrice": len(rentHoursList) * playground.price, "rentDate": rentDate})

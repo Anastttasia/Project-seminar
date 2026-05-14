@@ -92,9 +92,12 @@
                 </div>
 
                 <div class="containerFile">
-                    <img src="./src/img/file.svg" style="width: 96px; height: 112px;">
-                    <p class="fileSizeText">2.3 Мб</p>
-                    <button class="btnBook"><p class="btnBookDesc">Скачать pdf</p></button>
+                    <div>{{playground.name}}</div>
+                    <div>{{rentDate}}</div>
+                    {% for hour in hours %}
+                        <div>{{hour}}:00-{{hour|add:"1"}}:00</div>
+                    {% endfor %}
+                    <div>{{finalPrice}}</div>
                 </div>
 
             </div>
